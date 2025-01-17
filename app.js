@@ -47,21 +47,6 @@ function clearInputValues() {
     getDomId('ate').value = '';
 }
 
-// function allowReset() {
-//     if (isGeneratedNumbersEmpty()) {
-//         return;
-//     }
-//     let restartButton = getDomId('btn-reiniciar');
-//     restartButton.classList.remove('container__botao-desabilitado');
-//     restartButton.classList.add('container__botao');
-// }
-
-// function disableReset() {
-//     let restartButton = getDomId('btn-reiniciar');
-//     restartButton.classList.remove('container__botao');
-//     restartButton.classList.add('container__botao-desabilitado');
-// }
-
 function toggleResetButton(isEnabled) {
     const restartButton = getDomId('btn-reiniciar');
 
@@ -79,7 +64,6 @@ function sortear() {
     generateRandomNumbers();
     showResultsText();
     toggleResetButton(!isGeneratedNumbersEmpty()); 
-    // allowReset();
 }
 
 function reiniciar() {
@@ -87,7 +71,6 @@ function reiniciar() {
     clearInputValues();
     originalTextResult();
     toggleResetButton(false);
-    // disableReset();
 }
 
 function isGeneratedNumbersEmpty() {
